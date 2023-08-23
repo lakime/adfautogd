@@ -1,4 +1,17 @@
 # Starter pipeline
+- task: AzureResourceManagerTemplateDeployment@3
+  inputs:
+    deploymentScope: 'Resource Group'
+    azureResourceManagerConnection: 'BDAG'
+    subscriptionId: '64e274c3-3493-4116-90f8-9c3098aaa268'
+    action: 'Create Or Update Resource Group'
+    resourceGroupName: 'greendtest'
+    location: 'East US'
+    templateLocation: 'Linked artifact'
+    csmFile: '$(System.DefaultWorkingDirectory)/_lakime_adfautogd/greendtest1/ARMTemplateForFactory.json'
+    csmParametersFile: '$(System.DefaultWorkingDirectory)/_lakime_adfautogd/greendtest1/ARMTemplateParametersForFactory.json'
+    overrideParameters: '-abc supertest'
+    deploymentMode: 'Incremental'
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
