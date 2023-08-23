@@ -13,7 +13,7 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- checkout: git://adf_test/adfrepo@adf_publish # checks out the features/tools branch
+- checkout: adfrepo
 - script: dir $(Build.SourcesDirectory)
 # - task: AzureResourceManagerTemplateDeployment@3
 #   inputs:
