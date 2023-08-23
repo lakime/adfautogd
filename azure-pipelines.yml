@@ -27,8 +27,11 @@ steps:
     templateLocation: 'Linked artifact'
     csmFile: '$(Build.SourcesDirectory)/greendtest1/ARMTemplateForFactory.json'
     csmParametersFile: '$(Build.SourcesDirectory)/greendtest1/ARMTemplateParametersForFactory.json'
+    overrideParameters: >
+      -default_properties_abc_value supertest
+      -factoryName "gdtest2023"
+    
 
-    overrideParameters: '-default_properties_abc_value supertest'
     deploymentMode: 'Incremental'
 
 
