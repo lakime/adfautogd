@@ -15,7 +15,7 @@ pool:
 
 steps:
 - checkout: adfrepo
-- script: dir $(Build.SourcesDirectory)
+- script: dir $(Build.SourcesDirectory)/greendtest1/
 # - task: AzureResourceManagerTemplateDeployment@3
 #   inputs:
 #     deploymentScope: 'Resource Group'
