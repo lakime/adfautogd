@@ -7,6 +7,22 @@ resources:
     ref: adf_publish
     name: lakime/adfautogd
 
+parameters:
+  - name: DATABASE_TIER
+    displayName: Tenant Database Tier
+    type: string
+    default: S0
+    values:
+      - S0
+      - S1
+      - S2
+      - S3
+      - S4
+      - S6
+      - S7
+      - S9
+      - S12
+
 trigger:
 - main
 
