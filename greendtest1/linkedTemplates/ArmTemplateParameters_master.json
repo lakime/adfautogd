@@ -5,6 +5,9 @@
 		"factoryName": {
 			"value": "greendtest1"
 		},
+		"default_properties_abc_value": {
+			"value": "abc"
+		},
 		"containerUri": {
 			"value": ""
 		},
