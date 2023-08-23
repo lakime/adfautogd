@@ -12,11 +12,11 @@ parameters:
   - name: DENV
     displayName: "Deployment Environment"
     type: string
-    default: pi
+    default: "pi"
     values:
-      - pi
-      - qa
-      - prd
+      - "pi"
+      - "qa"
+      - "prd"
 
 variables:
   - ${{ if eq(parameter.DENV, 'pi') }}:
@@ -25,15 +25,11 @@ variables:
         -default_properties_aaddff_value "brai"
         -factoryName "gdtest2023"
 
-
-
 trigger:
 - main
 
 pool:
   vmImage: ubuntu-latest
-
-
 
 steps:
 - checkout: adfrepo
