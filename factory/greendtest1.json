@@ -1,5 +1,13 @@
 {
 	"name": "greendtest1",
+	"properties": {
+		"globalParameters": {
+			"abc": {
+				"type": "string",
+				"value": "abc"
+			}
+		}
+	},
 	"location": "eastus",
 	"identity": {
 		"type": "SystemAssigned",
