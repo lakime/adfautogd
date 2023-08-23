@@ -24,7 +24,7 @@ variables:
       value: >
         -default_properties_aaddff_value "value1"
         -factoryName "gdtest2023"
-    - ${{ elseif eq(parameters.DENV, 'qa'}}:
+    - ${{ elseif eq(parameters.DENV, 'qa') }}:
       - name: pienv
         value: >
           -default_properties_aaddff_value "value2"
