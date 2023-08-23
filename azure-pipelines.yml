@@ -4,6 +4,7 @@ resources:
   - repository: adfrepo # The name used to reference this repository in the checkout step
     type: github
     endpoint: adf_test
+    branch: adf_publish
     name: lakime/adfautogd
 
 trigger:
