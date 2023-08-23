@@ -17,8 +17,8 @@ steps:
     resourceGroupName: 'greendtest'
     location: 'East US'
     templateLocation: 'Linked artifact'
-    csmFile: '$(System.ArtifactsDirectory)/_lakime_adfautogd/greendtest1/ARMTemplateForFactory.json'
-    csmParametersFile: '$(System.ArtifactsDirectory)/_lakime_adfautogd/greendtest1/ARMTemplateParametersForFactory.json'
+    csmFile: '$(System.ArtifactsDirectory)/_adfautogd/greendtest1/ARMTemplateForFactory.json'
+    csmParametersFile: '$(System.ArtifactsDirectory)/_adfautogd/greendtest1/ARMTemplateParametersForFactory.json'
 
     overrideParameters: '-abc supertest'
     deploymentMode: 'Incremental'
