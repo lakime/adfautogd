@@ -10,6 +10,10 @@
 		"default_properties_abc_value": {
 			"type": "string",
 			"defaultValue": "abc"
+		},
+		"default_properties_aaddff_value": {
+			"type": "string",
+			"defaultValue": "123"
 		}
 	},
 	"variables": {
@@ -24,6 +28,10 @@
 				"abc": {
 					"type": "string",
 					"value": "[parameters('default_properties_abc_value')]"
+				},
+				"aaddff": {
+					"type": "string",
+					"value": "[parameters('default_properties_aaddff_value')]"
 				}
 			},
 			"dependsOn": []

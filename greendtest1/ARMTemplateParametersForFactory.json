@@ -7,6 +7,9 @@
 		},
 		"default_properties_abc_value": {
 			"value": "abc"
+		},
+		"default_properties_aaddff_value": {
+			"value": "123"
 		}
 	}
 }
