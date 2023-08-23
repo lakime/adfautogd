@@ -1,0 +1,9 @@
+{
+	"name": "greendtest1",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "60d35f2b-1da8-4bd5-8ea7-dff6431c0cd8",
+		"tenantId": "6c51c659-9d52-41af-81f7-dde16380e813"
+	}
+}
