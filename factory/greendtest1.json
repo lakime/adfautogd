@@ -5,6 +5,10 @@
 			"abc": {
 				"type": "string",
 				"value": "abc"
+			},
+			"aaddff": {
+				"type": "string",
+				"value": "123"
 			}
 		}
 	},
