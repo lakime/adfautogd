@@ -28,7 +28,7 @@ steps:
     csmFile: '$(Build.SourcesDirectory)/greendtest1/ARMTemplateForFactory.json'
     csmParametersFile: '$(Build.SourcesDirectory)/greendtest1/ARMTemplateParametersForFactory.json'
 
-    overrideParameters: '-dataFactory_properties_globalParameters_abc_value supertest'
+    overrideParameters: '-default_properties_abc_value supertest'
     deploymentMode: 'Incremental'
 
 
