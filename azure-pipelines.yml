@@ -1,4 +1,5 @@
 # Starter pipeline
+    
 resources:
   repositories:
   - repository: adfrepo # The name used to reference this repository in the checkout step
@@ -8,26 +9,31 @@ resources:
     name: lakime/adfautogd
 
 parameters:
-  - name: DATABASE_TIER
-    displayName: Tenant Database Tier
+  - name: DENV
+    displayName: "Deployment Environment"
     type: string
-    default: S0
+    default: pi
     values:
-      - S0
-      - S1
-      - S2
-      - S3
-      - S4
-      - S6
-      - S7
-      - S9
-      - S12
+      - pi
+      - qa
+      - prd
+
+variables:
+  - ${{ if eq(parameter.DENV, 'pi') }}:
+    - name: pienv
+      value: >
+        -default_properties_aaddff_value "brai"
+        -factoryName "gdtest2023"
+
+
 
 trigger:
 - main
 
 pool:
   vmImage: ubuntu-latest
+
+
 
 steps:
 - checkout: adfrepo
@@ -43,9 +49,7 @@ steps:
     templateLocation: 'Linked artifact'
     csmFile: '$(Build.SourcesDirectory)/greendtest1/ARMTemplateForFactory.json'
     csmParametersFile: '$(Build.SourcesDirectory)/greendtest1/ARMTemplateParametersForFactory.json'
-    overrideParameters: >
-      -default_properties_aaddff_value "supertest"
-      -factoryName "gdtest2023"
+    overrideParameters: $(pienv)
 
     deploymentMode: 'Incremental'
 
