@@ -1,4 +1,10 @@
 # Starter pipeline
+resources:
+  repositories:
+  - repository: adfrepo # The name used to reference this repository in the checkout step
+    type: github
+    endpoint: MyGitHubServiceConnection
+    name: lakime/adfautogd
 
 trigger:
 - main
@@ -17,7 +23,7 @@ steps:
     resourceGroupName: 'greendtest'
     location: 'East US'
     templateLocation: 'Linked artifact'
-    csmFile: '$(System.ArtifactsDirectory)/_adfautogd/greendtest1/ARMTemplateForFactory.json'
+    csmFile: '/home/vsts/work/1/s/greendtest1/ARMTemplateForFactory.json'
     csmParametersFile: '$(System.ArtifactsDirectory)/_adfautogd/greendtest1/ARMTemplateParametersForFactory.json'
 
     overrideParameters: '-abc supertest'
